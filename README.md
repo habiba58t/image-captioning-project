@@ -29,17 +29,14 @@ This project focuses on building an automatic image captioning system that gener
      - Caption sequences processed with Embedding, Dropout, and stacked LSTMs.  
    - Merge branches and pass through Dense layers to output word probabilities.
 
-   ```plaintext
-Layer (type)            Output Shape        Param #     Connected to
-----------------------------------------------------------------------
-input_layer_6           (None, 2048)        0           
-input_layer_7           (None, 37)          0           
-dense_10 (Dense)        (None, 512)         1,049,088   input_layer_6[0][0]
-embedding_3 (Embedding) (None, 37, 256)     2,149,888   input_layer_7[0][0]
-batch_normalization     (None, 512)         2,048       dense_10[0][0]
-dropout_7 (Dropout)     (None, 37, 256)     0           embedding_3[0][0]
+input_layer_6            (None, 2048)         0           
+input_layer_7            (None, 37)           0           
+dense_10 (Dense)         (None, 512)          1,049,088   input_layer_6[0][0]
+embedding_3 (Embedding)  (None, 37, 256)      2,149,888   input_layer_7[0][0]
+batch_normalization      (None, 512)          2,048       dense_10[0][0]
+dropout_7 (Dropout)      (None, 37, 256)      0           embedding_3[0][0]
 ...
-dense_13 (Dense)        (None, 8398)        2,158,286   dropout_8[0][0]
+dense_13 (Dense)         (None, 8398)         2,158,286   dropout_8[0][0]
 
 Total params: 6,608,078
 Trainable params: 6,606,542
