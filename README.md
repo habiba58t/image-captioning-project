@@ -29,7 +29,8 @@ This project focuses on building an automatic image captioning system that gener
      - Caption sequences processed with Embedding, Dropout, and stacked LSTMs.  
    - Merge branches and pass through Dense layers to output word probabilities.
 
-   Layer (type)            Output Shape        Param #     Connected to
+   ```plaintext
+Layer (type)            Output Shape        Param #     Connected to
 ----------------------------------------------------------------------
 input_layer_6           (None, 2048)        0           
 input_layer_7           (None, 37)          0           
